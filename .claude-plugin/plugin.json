@@ -1,0 +1,17 @@
+{
+  "name": "atlas-family",
+  "version": "0.1.0-beta.3",
+  "description": "Create, edit and verify native loadable Revit families. Requires Atlas Core.",
+  "author": {
+    "name": "ROSHDY"
+  },
+  "homepage": "https://github.com/mroshdy91/RevitAtlas.Family-Plugin",
+  "repository": "https://github.com/mroshdy91/RevitAtlas.Family-Plugin",
+  "license": "LicenseRef-Atlas-Free-Use",
+  "keywords": [
+    "revit",
+    "bim",
+    "family"
+  ],
+  "mcpServers": "./.mcp.json"
+}
