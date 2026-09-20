@@ -1,7 +1,7 @@
 {
   "name": "atlas-family",
   "version": "0.1.0-beta.1",
-  "description": "Atlas Family client package. Public runtime release pending; requires a compatible shared Atlas Core runtime.",
+  "description": "Create, edit and verify native loadable Revit families. Requires Atlas Core.",
   "author": {
     "name": "ROSHDY"
   },
@@ -9,14 +9,14 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Atlas Family",
-    "shortDescription": "Client preview; runtime release pending",
-    "longDescription": "Focused Revit tools and guidance using the shared Atlas Core runtime. This draft contains no runtime installer and does not establish public Revit version support.",
+    "shortDescription": "Create, edit and verify native loadable Revit families. Requires Atlas Core.",
+    "longDescription": "Create, edit and verify native loadable Revit families. Requires Atlas Core. Scoped public beta for Revit 2025 and 2026; discover supported actions and limitations through Atlas Core.",
     "developerName": "ROSHDY",
     "category": "Productivity",
     "capabilities": [
       "Read",
       "Write"
     ],
-    "defaultPrompt": "Check Atlas status and available capabilities before starting work."
+    "defaultPrompt": "Check Atlas status and help me with Revit family."
   }
 }

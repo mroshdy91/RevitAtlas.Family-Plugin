@@ -1,11 +1,10 @@
 {
-  "format_version": 1,
-  "runtime_included": false,
-  "public_runtime_ready": false,
+  "publication_ready": true,
+  "version": "0.1.0-beta.1",
   "files": [
     {
       "path": ".codex-plugin/plugin.json",
-      "sha256": "cfd3e670804f32bc349b365b50334b5443be0231926d3f2e23ab5c07799b65ce"
+      "sha256": "847f6d71a95d50eba81e76e32ed59146f92af8d800aa0fd3f10c14e1321a5895"
     },
     {
       "path": ".mcp.json",
@@ -13,15 +12,19 @@
     },
     {
       "path": "compatibility.json",
-      "sha256": "b249d231297a1a10c3b986e5c0a6e3045a15e7e8cebbf08aaee3931dfe24b6c6"
+      "sha256": "5b46a2f9551763c7ca274cc59fe4c194aaab8fe8b007dbed58a4ef8adcd508d7"
+    },
+    {
+      "path": "FREE-USE-TERMS.txt",
+      "sha256": "628428c49adf5eddb111c65ba100e89f9e9a60a44aebe7c7060e25166bad76ad"
     },
     {
       "path": "README.md",
-      "sha256": "579787cf6ba8665eb0de7f49a66eaff8fa31c5094665906187914d3e59734033"
+      "sha256": "eb3eb11641804947d6dba8bf5f155bb778eab88d8e0997c3a8a7e904ccec249d"
     },
     {
       "path": "RELEASE-READINESS.md",
-      "sha256": "66a7edc515fccdc580d9518e1c82b45db6fbe48290fa168f23833fe252db04b7"
+      "sha256": "1b348d4836aa24beb385d356a761bb9b12920921b4311509c78a2a42eac51bf9"
     },
     {
       "path": "skills/use-atlas-family/references/behavior-first.md",
@@ -29,7 +32,7 @@
     },
     {
       "path": "skills/use-atlas-family/SKILL.md",
-      "sha256": "9a3f0ee2246d1b9a5eb9ea405af56ec64905385c49a309765e801c120292bd1a"
+      "sha256": "a134a193d15d0d20bde9582d5656be09ce67baad1603bbaf2d9f3d3e0e81bd15"
     }
   ]
 }

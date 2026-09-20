@@ -3,13 +3,15 @@ name: use-atlas-family
 description: Create, edit and verify native loadable Revit families through Atlas Family, paired with Atlas Core for work identity, inspection, review and delivery.
 ---
 
+If Atlas tools cannot connect, follow the installed Atlas Core skill's agent-assisted installation reference. When setup is authorized, the agent runs Core's packaged helper; do not ask the user to configure tokens or install another Family engine. If Core is absent, install it through the selected marketplace first.
+
 # Atlas Family
 
 Use Atlas Core to discover the session, create the owned work item, retain engineering intent and recover operations. Request the exact Family action contract through `atlas_catalog`; reuse it when known.
 
 Native family geometry, parameters, references, components, representation and specialized interfaces belong to this surface. Ordinary families do not require MEP checks. Work IDs and revisions must come from the paired Core connection.
 
-The compatible private runtime admits its qualified typed family routes; public runtime availability is tracked separately. Check Core status and the current action contract for the connection profile, engine compatibility and capability limits; restricted migration-subset connections can admit fewer actions. A mapped action returning `MIGRATION_PENDING` is unavailable; do not substitute imported geometry, arbitrary scripts or a weaker requirement. Report the missing capability honestly.
+The compatible Core runtime admits fixed typed family routes. Check Core status and the current action contract for the connection profile, engine compatibility and capability limits; restricted migration-subset connections can admit fewer actions. A mapped action returning `MIGRATION_PENDING` is unavailable; do not substitute imported geometry, arbitrary scripts or a weaker requirement. Report the missing capability honestly.
 
 Preserve source files and separate engineering expectation from implementation and evidence. Use native reference and parameter keys in constrained forms; flex every requested type and probe requested controls before review. Inspect existing associations before replacing them. Imported/static content cannot satisfy native parametric requirements without demonstrated behavior. Optional connectors, adaptive and structural operations retain their own applicability.
 
