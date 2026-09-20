@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "runtime_included": false,
+  "public_runtime_ready": false,
+  "files": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "cfd3e670804f32bc349b365b50334b5443be0231926d3f2e23ab5c07799b65ce"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "e295555de7d63a6c7e5ac583f13b96f2b0759e7532ec2e90f7971886b1117738"
+    },
+    {
+      "path": "compatibility.json",
+      "sha256": "b249d231297a1a10c3b986e5c0a6e3045a15e7e8cebbf08aaee3931dfe24b6c6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "579787cf6ba8665eb0de7f49a66eaff8fa31c5094665906187914d3e59734033"
+    },
+    {
+      "path": "RELEASE-READINESS.md",
+      "sha256": "66a7edc515fccdc580d9518e1c82b45db6fbe48290fa168f23833fe252db04b7"
+    },
+    {
+      "path": "skills/use-atlas-family/references/behavior-first.md",
+      "sha256": "56def6338869b08a1c2c4c89840bd996f593c6ea707f175acc05aa8ea6d23efc"
+    },
+    {
+      "path": "skills/use-atlas-family/SKILL.md",
+      "sha256": "9a3f0ee2246d1b9a5eb9ea405af56ec64905385c49a309765e801c120292bd1a"
+    }
+  ]
+}
