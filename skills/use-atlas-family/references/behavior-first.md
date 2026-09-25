@@ -6,6 +6,10 @@ Separate requested shape, resizing, movement, visibility, materials and interfac
 
 Create/reuse the intended types before parameter definitions. Establish reference planes with labeled dimensions. `constrained_extrusion` binds a rectangular framework and optional start/end parameters. Test two requested types using geometry flex and compare actual bounds/dimensions with the brief before adding fasteners or nested detail.
 
+The [native anchored plinth example](native-anchored-plinth.json) contains action inputs exercised in Revit 2025: two types, reference planes, driving dimensions, a constrained extrusion and a semantic formula. After creating work and defining its intent, add the current `work_id` and `expected_revision` to each input and use a fresh operation identity. Refresh revisions from each result. Replace sizes and names for the actual brief; this example is construction, not a completed acceptance specification.
+
+It pins the minimum X/Y reference planes and leaves minimum Z at zero. Measure `min_x`, `min_y`, `min_z` as well as width/depth/height in both types. This example anchors a corner; it does not implement a centered insertion point. If centering is requested, use a framework that demonstrates it and include `center_x`/`center_y` criteria rather than assuming a size label centers the object.
+
 Fixed cylinder/box primitives retain their literal dimensions. A length parameter with the same name as a dimension is not an association. Curved profiles support declared native editable forms; this does not imply every arc/spline is formula-driven. Request the forms/constraints contracts and disclose unsupported outline behavior explicitly.
 
 ## Movement: a sliding panel, stem or telescoping part

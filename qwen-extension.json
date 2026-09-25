@@ -1,6 +1,6 @@
 {
   "name": "atlas-family",
-  "version": "0.1.0-beta.4",
+  "version": "2.0.0-alpha.1",
   "description": "Create, edit and verify native loadable Revit families. Requires Atlas Core.",
   "mcpServers": {
     "atlas_family": {
@@ -12,7 +12,9 @@
         "-File",
         "${extensionPath}/scripts/atlas-mcp.ps1",
         "-Surface",
-        "family"
+        "family",
+        "-Interface",
+        "v2-candidate"
       ]
     }
   }

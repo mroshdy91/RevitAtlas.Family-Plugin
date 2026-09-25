@@ -1,9 +1,0 @@
-{
-  "mcpServers": {
-    "atlas_family": {
-      "type": "http",
-      "url": "http://127.0.0.1:18765/family/mcp",
-      "bearer_token_env_var": "ATLAS_BEARER_TOKEN"
-    }
-  }
-}

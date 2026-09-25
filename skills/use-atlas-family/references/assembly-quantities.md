@@ -1,0 +1,15 @@
+# Assembly quantities
+
+Define which pieces, welds, external hardware and coatings belong to the requested quantity. Keep an assembled-piece quantity distinct from a sum of part quantities. The chosen exposed-surface definition determines whether open bores or cavities count; contact faces and sealed, unexposed internal interfaces must not be counted as exposed air surface.
+
+Use native geometry or independently checked analytical formulas for the assembled exposed area. Adding every part's surface area double-counts connections. Account for contact regions, cutouts and the weld's exposed face consistently; do not apply an unverified constant deduction across all sizes or rectangular/round variants.
+
+Compute each material's actual volume after cuts and intended overlap deductions. Compute weld metal volume explicitly, with a consistent convention at the parent-part intersection. Mass is the sum of material volume times its density, including weld metal; a material name is not a density calculation. Expose weld volume separately when requested. Area, volume, mass and density parameters require compatible dimensional kinds and units.
+
+For a self-contained RFA deliverable, schedule outputs must update through native family parameters/formulas and remain valid without an Atlas process or companion application. If the brief permits user-entered densities, expose documented density inputs for each relevant material, including weld metal. Do not claim that a formula automatically reads a native material-density property unless that dependency is actually supported and demonstrated. Density inputs do not make the area or geometry volumes manual quantities.
+
+Associate quantity drivers with the same dimensions, material choices and configuration controls that drive the piece. Check representative small/large sizes, round/rectangular variants, optional pieces and side-specific combinations against independently calculated expected values. Load into a test project, inspect actual schedule cells, change a type/configuration, save, reopen and inspect again. Keep parameter binding, computed number, displayed units and physical quantity scope as separate checks.
+
+Inspect the actual schedule display as well as the numeric parameter. Project defaults can round a positive weld volume to zero. Where the loaded engine advertises `schedule_field_format_v1`, the schedule action accepts a per-field `format` such as `{ "unit": "cm3", "accuracy": 0.01 }`; accuracy is the rounding increment in that display unit. Choose precision appropriate to the quantity, include units in the heading, and verify native format metadata and cells after reopening. Omit formatting for text/validity fields or to retain project defaults. Display precision does not change physical volumes or formulas.
+
+Report untested configurations and assumptions instead of treating a plausible schedule value as proof. A correct mass or area does not by itself establish fabrication, galvanizing-process or manufacturer compliance.

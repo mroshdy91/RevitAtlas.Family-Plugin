@@ -1,0 +1,242 @@
+[
+  {
+    "tool": "atlas_family_parameters",
+    "action": "ensure_type",
+    "input": {
+      "name": "Small"
+    }
+  },
+  {
+    "tool": "atlas_family_parameters",
+    "action": "define",
+    "input": {
+      "definitions": [
+        {
+          "key": "width",
+          "name": "Width",
+          "kind": "length",
+          "default": {
+            "value": 600,
+            "unit": "mm"
+          }
+        },
+        {
+          "key": "depth",
+          "name": "Depth",
+          "kind": "length",
+          "default": {
+            "value": 400,
+            "unit": "mm"
+          }
+        },
+        {
+          "key": "height",
+          "name": "Height",
+          "kind": "length",
+          "default": {
+            "value": 750,
+            "unit": "mm"
+          }
+        },
+        {
+          "key": "half_width",
+          "name": "Half Width",
+          "kind": "length",
+          "default": {
+            "value": 300,
+            "unit": "mm"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tool": "atlas_family_parameters",
+    "action": "formula",
+    "input": {
+      "key": "half_width",
+      "syntax": "semantic",
+      "expression": "@{width} / 2"
+    }
+  },
+  {
+    "tool": "atlas_family_parameters",
+    "action": "types",
+    "input": {
+      "rows": [
+        {
+          "name": "Large",
+          "source_type": "Small",
+          "values": {
+            "width": {
+              "value": 900,
+              "unit": "mm"
+            },
+            "depth": {
+              "value": 600,
+              "unit": "mm"
+            },
+            "height": {
+              "value": 900,
+              "unit": "mm"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tool": "atlas_family_constraints",
+    "action": "define",
+    "input": {
+      "entities": [
+        {
+          "key": "base_left",
+          "kind": "plane",
+          "name": "base_left",
+          "axis": "x",
+          "offset": {
+            "value": 0,
+            "unit": "mm"
+          },
+          "extent": {
+            "value": 2000,
+            "unit": "mm"
+          },
+          "pinned": true
+        },
+        {
+          "key": "base_right",
+          "kind": "plane",
+          "name": "base_right",
+          "axis": "x",
+          "offset": {
+            "value": 600,
+            "unit": "mm"
+          },
+          "extent": {
+            "value": 2000,
+            "unit": "mm"
+          },
+          "pinned": false
+        },
+        {
+          "key": "base_front",
+          "kind": "plane",
+          "name": "base_front",
+          "axis": "y",
+          "offset": {
+            "value": 0,
+            "unit": "mm"
+          },
+          "extent": {
+            "value": 2000,
+            "unit": "mm"
+          },
+          "pinned": true
+        },
+        {
+          "key": "base_back",
+          "kind": "plane",
+          "name": "base_back",
+          "axis": "y",
+          "offset": {
+            "value": 400,
+            "unit": "mm"
+          },
+          "extent": {
+            "value": 2000,
+            "unit": "mm"
+          },
+          "pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "tool": "atlas_family_constraints",
+    "action": "constrain",
+    "input": {
+      "constraints": [
+        {
+          "key": "width_dimension",
+          "kind": "distance",
+          "first": "base_left",
+          "second": "base_right",
+          "parameter": "width",
+          "offset": {
+            "value": -100,
+            "unit": "mm"
+          }
+        },
+        {
+          "key": "depth_dimension",
+          "kind": "distance",
+          "first": "base_front",
+          "second": "base_back",
+          "parameter": "depth",
+          "offset": {
+            "value": -100,
+            "unit": "mm"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tool": "atlas_family_forms",
+    "action": "profiles",
+    "input": {
+      "profiles": [
+        {
+          "key": "rectangle",
+          "shape": "rectangle",
+          "width": {
+            "value": 600,
+            "unit": "mm"
+          },
+          "height": {
+            "value": 400,
+            "unit": "mm"
+          },
+          "center": {
+            "x": 300,
+            "y": 200,
+            "unit": "mm"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tool": "atlas_family_forms",
+    "action": "create",
+    "input": {
+      "forms": [
+        {
+          "key": "body",
+          "kind": "constrained_extrusion",
+          "origin": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "unit": "mm"
+          },
+          "plane": "xy",
+          "profile": "rectangle",
+          "depth": {
+            "value": 750,
+            "unit": "mm"
+          },
+          "references": {
+            "left": "base_left",
+            "right": "base_right",
+            "front": "base_front",
+            "back": "base_back"
+          },
+          "end_parameter": "height"
+        }
+      ]
+    }
+  }
+]

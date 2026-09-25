@@ -11,7 +11,9 @@
         "-File",
         "./scripts/atlas-mcp.ps1",
         "-Surface",
-        "family"
+        "family",
+        "-Interface",
+        "v2-candidate"
       ]
     }
   }
