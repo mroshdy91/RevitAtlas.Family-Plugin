@@ -1,6 +1,6 @@
 {
   "name": "atlas-family",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "Create, edit and verify native loadable Revit families. Requires Atlas Core.",
   "author": {
     "name": "ROSHDY"
